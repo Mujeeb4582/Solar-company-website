@@ -8,12 +8,12 @@ function Home() {
         <Image
           src={pic}
           alt="landing picture"
-          width={205}
+          width={300}
           height={75}
           priority
         />
       </div>
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-left p-12">
         <h1 className="text-2xl lg:text-4xl font-bold mb-4 lg:mb-8">An opportunity for<span className="text-[#FF7C24]"> sustainable living </span> and Development</h1>
         <p className="text-base lg:text-lg mb-4 lg:mb-2">and the Exclusive Representative of NUUKO POWER Solar Brand in the Country</p>
       </div>
