@@ -1,32 +1,32 @@
 "use client"
-import pic from '../../../public/image/pic.webp';
-import pic1 from '../../../public/image/pic1.jpg';
-import pic2 from '../../../public/image/pic2.webp';
-import pic3 from '../../../public/image/pic3.jpeg';
-import pic4 from '../../../public/image/pic4.jpeg';
-import Carousel from "../Carousel";
+import pic from '../../public/image/pic.webp';
+import pic1 from '../../public/image/pic1.jpg';
+import pic2 from '../../public/image/pic2.webp';
+import pic3 from '../../public/image/pic3.jpeg';
+import pic4 from '../../public/image/pic4.jpeg';
+import ServicesCarousel from './Carousel';
 import Image from "next/image";
 
-const Slider = () => {
+const ServicesSlider = () => {
   const images = [pic, pic1, pic2, pic3, pic4];
   return (
     <div>
 
-      <Carousel loop>
+      <ServicesCarousel loop>
         {images.map((src, i) => {
           return (
-            <div className="relative  flex-[0_0_100%]" key={i}>
+            <div className="relative  flex-[0_0_50%]" key={i}>
               {/* use object-cover + fill since we don't know the height and width of the parent */}
-              <Image src={src}  className="object-cover" alt="alt" 
+              <Image src={src}  className="w-full  h-full" alt="alt" 
             />
             </div>
           );
         })}
-      </Carousel>
+      </ServicesCarousel>
     </div>
 
 
   );
 };
 
-export default Slider;
+export default ServicesSlider;

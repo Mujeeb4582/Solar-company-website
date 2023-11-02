@@ -47,13 +47,13 @@ function Header() {
                     {/* Mobile Menu */}
 
                     <div onClick={toggleMenu}
-                        className="sm:hidden cursor-pointer pl-24">
+                        className="sm:hidden cursor-pointer pl-24 ">
                         <BsList className="h-8 w-8 text-[#0C3D90]" />
                     </div>
                 </div>
                 <div className={
                     menuOpen
-                        ? "fixed top-0 left-0 w-[75%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in-out duration-500"
+                        ? "fixed top-0 left-0 w-[100%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in-out duration-500 z-10"
                         : "fixed left-[-100%] top-0 p-10 ease-in-out duration-500"
                 } >
                     <div className="flex w-full items-center justify-end">
