@@ -28,7 +28,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Services />
+      <div className="flex flex-col lg:flex-row pl-4 lg:pl-24 p-12 bg-gray-100">
+  <div className="w-full">
+    <Services />
+  </div>
+</div>
+
     </>
   );
 
