@@ -17,11 +17,11 @@ const ServicesSlider = () => {
             <div className="relative flex-[0_0_40%] group" key={i}>
               {/* use object-cover + fill since we don't know the height and width of the parent */}
               <Image src={src} className="w-full h-full" alt="alt" />
-              <div className="absolute inset-0 flex flex-col items-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                <p className="text-white font-bold text-lg mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+              <div className="absolute inset-0 flex flex-col items-center pl-12 p-24 my-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                <p className="text-white font-bold text-lg mb-10  mt-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Deserunt eos porro quisquam dicta. Omnis adipisci maiores deleniti accusantium labore, magnam sapiente obcaecati a 
                 inventore voluptatem voluptates, reprehenderit consequuntur cupiditate consectetur.</p>
-                <button className="bg-[#0C3D90] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button className="bg-[#0C3D90] hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full">
                   Learn More
                 </button>
               </div>
