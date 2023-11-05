@@ -7,7 +7,7 @@ type Props = {
   onPrev(): void;
   onNext(): void;
 };
-const CarouselControls = (props: Props) => {
+const RecentCarouselControls = (props: Props) => {
   return (
     <div className="flex justify-end gap-2 ">
       <button
@@ -43,4 +43,4 @@ const CarouselControls = (props: Props) => {
     </div>
   );
 };
-export default CarouselControls;
+export default RecentCarouselControls;

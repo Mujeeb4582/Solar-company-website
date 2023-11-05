@@ -1,14 +1,12 @@
-import Services from '@/components/Services/Services';
-import Slider from '@/components/Slider/main_slider';
-import About from '@/components/About/about';
+import RecentSlider from '@/components/RecentProject/main_slider';
 import React from 'react';
-const Home = () => {
+const RecentProject = () => {
   return (
     <>
       <div className="flex flex-col lg:flex-row items-center pl-4 lg:pl-24 p-12  bg-gray-100">
         <div className="w-full sm:w-1/2">
 
-          <Slider />
+          <RecentSlider />
         </div>
         <div className="text-center lg:text-left p-12 pl-24">
           <h1 className="text-2xl lg:text-4xl font-bold mb-4 lg:mb-8">
@@ -30,14 +28,10 @@ const Home = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row p-12 bg-gray-100">
-        <div className="">
-          <Services />
-        </div>
       </div>
-<About />
     </>
   );
 
 };
-export default Home;
+export default RecentProject;
 

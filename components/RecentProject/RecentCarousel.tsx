@@ -1,13 +1,13 @@
 // components/Carousel.tsx
 import React from "react";
-import Dots from "./Dots";
-import CarouselControls from "./CarouselControls";
+import RecentDots from './RecentDots';
+import RecentCarouselControls from "./RecentCarsouselControls";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import { PropsWithChildren, useEffect, useState } from "react";
 
 type Props = PropsWithChildren & EmblaOptionsType;
 
-const Carousel = ({ children, ...options }: Props) => {
+const RecentCarousel = ({ children, ...options }: Props) => {
   const length = React.Children.count(children);
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const canScrollNext = !!emblaApi?.canScrollNext();
@@ -36,8 +36,8 @@ const Carousel = ({ children, ...options }: Props) => {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">{children}</div>
       </div>
-      <Dots itemsLength={length} selectedIndex={selectedIndex} />
-      <CarouselControls
+      <RecentDots itemsLength={length} selectedIndex={selectedIndex} />
+      <RecentCarouselControls
         canScrollNext={canScrollNext}
         canScrollPrev={canScrollPrev}
         onNext={() => emblaApi?.scrollNext()}
@@ -47,5 +47,5 @@ const Carousel = ({ children, ...options }: Props) => {
 
   );
 };
-export default Carousel;
+export default RecentCarousel;
 
