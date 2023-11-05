@@ -1,12 +1,13 @@
 import Services from '@/components/Services/Services';
 import Slider from '@/components/Slider/main_slider';
+import About from '@/components/About/about';
 import React from 'react';
 const Home = () => {
   return (
     <>
       <div className="flex flex-col lg:flex-row items-center pl-4 lg:pl-24 p-12  bg-gray-100">
         <div className="w-full sm:w-1/2">
-          
+
           <Slider />
         </div>
         <div className="text-center lg:text-left p-12 pl-24">
@@ -28,12 +29,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row pl-4 lg:pl-24 p-12 bg-gray-100">
-  <div className="w-full">
-    <Services />
-  </div>
-</div>
-
+      <div className="flex flex-col lg:flex-row p-12 bg-gray-100">
+        <div className="">
+          <Services />
+        </div>
+      </div>
+<About />
     </>
   );
 
