@@ -34,7 +34,7 @@ const Home = () => {
           <Services />
         </div>
       </div>
-      <About />
+<About />
     </>
   );
 
