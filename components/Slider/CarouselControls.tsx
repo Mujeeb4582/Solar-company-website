@@ -1,5 +1,5 @@
 // components/CarouselControls.tsx
-import classNames from "classnames";
+import classNames from 'classnames';
 
 type Props = {
   canScrollPrev: boolean;
@@ -18,9 +18,9 @@ const CarouselControls = (props: Props) => {
         }}
         disabled={!props.canScrollPrev}
         className={classNames({
-          "px-4 py-2 text-white": true,
-          "bg-[#FF7C24]": !props.canScrollPrev,
-          "bg-indigo-400": props.canScrollPrev,
+          'px-4 py-2 text-white': true,
+          'bg-[#FF7C24]': !props.canScrollPrev,
+          'bg-indigo-400': props.canScrollPrev,
         })}
       >
         Prev
@@ -33,9 +33,9 @@ const CarouselControls = (props: Props) => {
         }}
         disabled={!props.canScrollNext}
         className={classNames({
-          "px-4 py-2 text-white ": true,
-          "bg-[#FF7C24]": !props.canScrollNext,
-          "bg-indigo-400": props.canScrollNext,
+          'px-4 py-2 text-white ': true,
+          'bg-[#FF7C24]': !props.canScrollNext,
+          'bg-indigo-400': props.canScrollNext,
         })}
       >
         Next

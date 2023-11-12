@@ -1,9 +1,9 @@
 // components/Carousel.tsx
-import React from "react";
-import ProjectsDots from "./ProjectsDots";
-import ProjectsCarouselControls from "./ProjectsCarouselControls";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import { PropsWithChildren, useEffect, useState } from "react";
+import React from 'react';
+import ProjectsDots from './ProjectsDots';
+import ProjectsCarouselControls from './ProjectsCarouselControls';
+import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import { PropsWithChildren, useEffect, useState } from 'react';
 
 type Props = PropsWithChildren & EmblaOptionsType;
 
@@ -24,10 +24,10 @@ const ProjectsCarousel = ({ children, ...options }: Props) => {
       setSelectedIndex(index || 0);
     }
 
-    emblaApi?.on("select", selectHandler);
+    emblaApi?.on('select', selectHandler);
     // cleanup
     return () => {
-      emblaApi?.off("select", selectHandler);
+      emblaApi?.off('select', selectHandler);
     };
   }, [emblaApi]);
 
@@ -44,8 +44,6 @@ const ProjectsCarousel = ({ children, ...options }: Props) => {
         onPrev={() => emblaApi?.scrollPrev()}
       />
     </>
-
   );
 };
 export default ProjectsCarousel;
-

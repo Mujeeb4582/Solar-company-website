@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import classNames from 'classnames';
 
 type Props = {
   itemsLength: number;
@@ -13,10 +13,10 @@ const Dots = ({ itemsLength, selectedIndex }: Props) => {
         return (
           <div
             className={classNames({
-              "h-1 px-5 mt-6 rounded-full transition-all duration-300 bg-[#0C3D90]":
+              'h-1 px-5 mt-6 rounded-full transition-all duration-300 bg-[#0C3D90]':
                 true,
               // tune down the opacity if slide is not selected
-              "opacity-50": !selected,
+              'opacity-50': !selected,
             })}
             key={index}
           ></div>

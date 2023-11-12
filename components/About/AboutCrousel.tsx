@@ -1,16 +1,14 @@
 // components/Carousel.tsx
-import React from "react";
-import AboutDots from "@/components/About/AboutDots";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import { PropsWithChildren, useEffect, useState } from "react";
+import React from 'react';
+import AboutDots from '@/components/About/AboutDots';
+import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import { PropsWithChildren, useEffect, useState } from 'react';
 
 type Props = PropsWithChildren & EmblaOptionsType;
 
 const AboutCarousel = ({ children, ...options }: Props) => {
   const length = React.Children.count(children);
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-  const canScrollNext = !!emblaApi?.canScrollNext();
-  const canScrollPrev = !!emblaApi?.canScrollPrev();
 
   // We need to track the selectedIndex to allow this component to re-render in react.
   // Since emblaRef is a ref, it won't re-render even if there are internal changes to its state.
@@ -23,10 +21,10 @@ const AboutCarousel = ({ children, ...options }: Props) => {
       setSelectedIndex(index || 0);
     }
 
-    emblaApi?.on("select", selectHandler);
+    emblaApi?.on('select', selectHandler);
     // cleanup
     return () => {
-      emblaApi?.off("select", selectHandler);
+      emblaApi?.off('select', selectHandler);
     };
   }, [emblaApi]);
 
@@ -37,8 +35,6 @@ const AboutCarousel = ({ children, ...options }: Props) => {
       </div>
       <AboutDots itemsLength={length} selectedIndex={selectedIndex} />
     </>
-
   );
 };
 export default AboutCarousel;
-
